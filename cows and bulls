@@ -1,0 +1,16 @@
+secret=int(input("enter secret number"))
+guess=int(input("enter guess number"))
+secretlist=[d for d in str(secret)]
+guesslist=[d for d in str(guess)]
+print(secretlist)
+print(guesslist)
+x=0
+y=0
+for i,d in enumerate(secretlist):
+    if d in guesslist:
+        if secretlist[i]==guesslist[i]:
+            x=x+1
+        else:
+            y=y+1
+ans=str(x)+"A"+str(y)+"B"
+print(ans)
