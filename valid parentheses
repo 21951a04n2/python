@@ -11,6 +11,6 @@ for op in exp:
         elif op=='{' and stack[-1]=='}':
             stack.pop()
 if len(stack)==0:
-    print("True")
+    print("false")
 else:
-    print("False")
+    print("true")
