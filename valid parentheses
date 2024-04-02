@@ -1,0 +1,16 @@
+exp=input("enter expression:")
+stack=[]
+for op in exp:
+    if op in '([{':
+        stack.append(op)
+    else:
+        if op=='(' and stack[-1]==')':
+            stack.pop()
+        elif op=='[' and stack[-1]==']':
+            stack.pop()
+        elif op=='{' and stack[-1]=='}':
+            stack.pop()
+if len(stack)==0:
+    print("True")
+else:
+    print("False")
